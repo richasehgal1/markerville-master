@@ -13,6 +13,10 @@
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
+
+    <script src="js/jquery.js" defer></script>
+    <script src="js/pagination.js" defer></script>
+
     </head>
       <body>
           <div class = "navBar">
@@ -61,14 +65,18 @@
           <div id = "result" class="inactive">
               <div id = "result-table-cont">
 
-               <table>    
-                 <tr>
-                    <th> Biomarker Name
-                    <th> Biomarker Type
-                    <th> Disease 
-                    <th> Associated Drug
-                    <th> Medium
-                </tr>
+               <table>
+                  <thead>
+                     <tr>
+                        <th> Biomarker Name </th>
+                        <th> Biomarker Type </th>
+                        <th> Disease </th>
+                        <th> Associated Drug </th>
+                        <th> Medium </th>
+                      </tr>
+                  </thead>
+                <tbody>
+                </tbody>
              </table>
            </div>
           </div>
