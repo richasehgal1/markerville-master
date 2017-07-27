@@ -17,7 +17,7 @@ let collectionForum = null;
 async function startServer(){
 db = await MongoClient.connect(process.env.MONGODB_URI || MONGO_URL);
 collection = db.collection('testdb');
-// collectionForum = db.collection('forum');
+collectionForum = db.collection('forum');
 
 
 }
