@@ -52,6 +52,22 @@
 
   }
 
+#result thead tr
+{
+  width:100%;
+}
+
+#result thead th
+{
+  width:20%;
+}
+
+#result tbody
+{
+display:table-row-group;
+}
+
+
 
    @media (max-width: 700px){
      article{
@@ -69,7 +85,15 @@
    }
 
 
-  #forum-table-cont, #result-table-cont {
+#result-table-cont {
+   align-items: center;
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: white;
+      width: 100vw;
+
+}
+  #forum-table-cont{
     align-items: center;
     text-align: center;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
@@ -79,6 +103,9 @@
   }
 
 
+#result table{
+  width: 100%;
+}
 
 
 #forum th {
@@ -88,12 +115,6 @@
   color: white;
 }
 
-  #result td, #result th{
-    word-wrap: break-word;
-    width: 25vw;
-    color: white;
-
-  }
 
   #forum td {
     width: 50vw;

@@ -3,7 +3,6 @@ class Database {
     this.containerElement = containerElement;
     this.prevTable = document.querySelector("#result table tbody");
     this.message = document.querySelector('#result p');
-    this.prevTableRows = this.prevTable.getElementsByTagName('tr');
     this.clearDatabase = this.clearDatabase.bind(this);
   }
 
