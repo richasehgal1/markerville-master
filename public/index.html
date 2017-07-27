@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MarkerVille</title>   
     <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" type="text.css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/>
+     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/result.js" defer></script>
     <script src="js/about.js" defer></script>
     <script src="js/forum.js" defer></script>
@@ -13,13 +15,18 @@
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
+    <script src="js/jquery.js> </script>
+    <script src="js/jquery.min.js> </script>
 
-    
-
+    <script type="text/javascript"  src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
                      
-
-
+    </head>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#result table').DataTable();
+  });
     
+ </script>
       <body>
           <div class = "navBar">
               <div class = "button" id = "databaseButton" > Biomarker Search  </div>
@@ -76,13 +83,20 @@
                 <th> Associated Drug
                 <th> Medium
                </tr>
-               </thead> 
+               </thead>
+               <tbody>
+                 <tr>
+                 <td>
+                 <td>
+                 <td>
+                 <td>
+                 <td>
+                 </tr>
+               </tbody> 
                      
              </table>
            </div>
           </div>
-
-
 
           <div id = "database">
 
