@@ -21,12 +21,7 @@ $collection = 'testdb';
 /**
  * MongoDB connection
  */
-try {
-    $m = new Mongo();
-} catch (MongoConnectionException $e) {
-    die('Error connecting to MongoDB server');
-}
- 
+$connection = new MongoClient('mongodb://test:test@ds121543.mlab.com:21543/heroku_h1lksrdg') 
 $m_collection = $m->$database->$collection;
  
 /**
