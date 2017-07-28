@@ -8,7 +8,8 @@ const app = express();
 app.use(express.static('public'));
 
 
-const MONGO_URL = `mongodb://test:test@ds121543.mlab.com:21543/heroku_h1lksrdg`;
+const MONGO_URL = `
+mongodb://test:test@ds121543.mlab.com:21543/heroku_h1lksrdg`;
 
 let db = null;
 let collection = null;
