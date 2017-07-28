@@ -95,12 +95,12 @@
                <script type="text/javascript">
                 $(document).ready(function(){
                   $('#result table').DataTable();
-                  "processing": true,
-                  "serverSide": true,
-                  "ajax": "mongoprocessing.php"
-                 });
-             });
-            
+                  $('#result table').DataTable( {
+                      "processing": true,
+                      "serverSide": true,
+                      "ajax": "js/mongoprocessing.php"
+                  });
+                });
               </script>
 
            </div>
