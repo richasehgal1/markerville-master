@@ -32,6 +32,8 @@ async function onSearchData(event) {
 }
 }
 
+var q = Post.find({ "rating": { "$gt": 5 } }).sort( "rating" ).limit(10);
+
 var table = $('#result table').DataTable();
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);
