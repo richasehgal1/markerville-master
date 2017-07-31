@@ -41,7 +41,7 @@
 
 
 
-  #database, #aboutPage, #forum, #result{
+  #database, #aboutPage, #forum, #result, #resourcesPage{
 
     padding-top: 50px;
     min-height: 100vh;
@@ -169,6 +169,20 @@ display:table-row-group;
     opacity: 0.8;
   }
 
+    #resourcesPage p{
+      
+      /*word-wrap: break-word;*/
+      line-height: 30px;
+      /*position: absolute;*/
+      text-align: center;
+      color: white;
+      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-size: 1.6em;
+      margin: 0;
+      padding:30px;
+      padding-bottom: 10px;
+
+    }
 
 
     #aboutPage p{
@@ -185,8 +199,6 @@ display:table-row-group;
 
     }
 
-
-
     #database p{
       padding: 30px;
 
@@ -199,6 +211,8 @@ display:table-row-group;
       margin: 0;
       font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
     }
+
+
 
     .logo-cont {
       text-align: left;
@@ -228,7 +242,62 @@ display:table-row-group;
         opacity: 0.7;
       }
 
+      #resourcesPage #snorkel{
+        height: 185px;
+        width: 85px;
+        opacity: 1.0;
+        padding:30px;
+        padding-top: 0px;
+      }
+
+      #resourcesPage #canary{
+        height: 150px;
+        width: 200px;
+        opacity: 1.0;
+        padding: 30px;
+        padding-top: 0px
+      }
+
+      #resourcesPage #nodejs{
+        height: 150px;
+        width: 200px;
+        opacity: 1.0;
+        padding: 30px;
+        padding-top: 0px
+      }
+
       #aboutPic{
         padding-top: 30px;
         text-align: center;
       }
+
+      #resourcesPic{
+        padding-top: 30px;
+        text-align: center;
+      }
+
+      /* unvisited link */
+      a:link {
+      color: white;
+      text-decoration: bold;
+      }
+
+      /* visited link */
+      a:visited {
+      color: grey;
+      text-decoration: none;
+      }
+
+      /* mouse over link */
+      a:hover {
+      color: blue;
+      text-decoration: underline;
+      text-decoration: bold;
+      }
+
+      /* selected link */
+      a:active {
+      color: blue;
+      text-decoration: underline;
+      }
+
