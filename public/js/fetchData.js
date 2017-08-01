@@ -1,7 +1,7 @@
 //make sure is called
 async function onSearchData(event) {
   event.preventDefault();
-  const input = document.querySelector('#word-input');
+  const input = document.querySelector(id*='#word-input');
   const word = input.value.trim();
   const results = document.querySelector('#database');
   const result = await fetch('/lookup/' + word);
