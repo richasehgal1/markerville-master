@@ -1,8 +1,8 @@
 class Result {
 
   constructor(containerElement){
-    this.prevTable = document.querySelectorAll("#result table tbody");
-    this.message = document.querySelectorAll('#result p');
+    this.prevTable = document.querySelector("#result table tbody");
+    this.message = document.querySelector('#result p');
     this.prevTableRows = this.prevTable.getElementsByTagName('tr');
     this.containerElement = containerElement;
   }
