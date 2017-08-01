@@ -1,8 +1,6 @@
 //make sure is called
 async function onSearchData(event) {
- 
   event.preventDefault();
-  
   const input = document.querySelector('#word-input');
   const word = input.value.trim();
   const results = document.querySelector('#database');
@@ -32,7 +30,9 @@ async function onSearchData(event) {
     console.log(count);
 
 }
-} 
-var table = $('#testid').DataTable();
+}
+
+
+var table = $('#result table').DataTable();
 const searchForm = document.querySelector('#searchForm');
 searchForm.addEventListener('submit', onSearchData);

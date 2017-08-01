@@ -1,8 +1,9 @@
 class Result {
 
   constructor(containerElement){
+    this.prevTable = document.querySelector("#result table tbody");
     this.message = document.querySelector('#result p');
-    var table = $('#testid').DataTable();
+    this.prevTableRows = this.prevTable.getElementsByTagName('tr');
     this.containerElement = containerElement;
   }
 
@@ -14,7 +15,7 @@ class Result {
   hide(){
 
     this.containerElement.classList.add('inactive');
-    table.clear().draw();
+    this.prevTable.innerHTML = "";
 }
 
 
