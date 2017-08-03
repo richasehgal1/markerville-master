@@ -193,7 +193,7 @@ display:table-row-group;
 #result-table-cont {
    align-items: center;
     text-align: center;
-    font-family: 'Dosis', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: black;
       width: 100vw;
 
@@ -314,7 +314,7 @@ display:table-row-group;
       max-height: 50vh;
       font-size: 5em;
       margin: 0;
-      font-family: 'Open Sans', sans-serif;
+      font-family: 'Dosis', sans-serif;
       letter-spacing: 5px
     }
 
