@@ -82,7 +82,7 @@
 
 
           </div>
-          <div id =  "aboutPage" class="inactive">
+          <!-- <div id =  "aboutPage" class="inactive">
             <p> Markerville is a web-hosted database that displays information about biomarkers.
             Allows users to search and edit existing information, while adding new entries of their own.
             We aim to create a community around biomarkers in the clinical research world and beyond. 
@@ -95,44 +95,147 @@
             <img id = "gautam" src = "images/gautam.jpg"></img>
           </div>
 
-          </div>
-          <div id = "result" class="inactive">
-              <div id = "result-table-cont">
+          </div> -->
 
-               <table class ="display">  
+           <div id =  "aboutPage" class="inactive">
+          <div class="module">
+            <header>
+              <h1 style="margin-left:100px;">
+                <strong>ABOUT</strong><br>the most comprehensive database of disease-biomarker pairings
+              </h1>
+            </header>
+          </div>
+
+                    <div class="listing" style="margin-top:50px;margin-left:100px;margin-right:100px;">
+            <article>Markerville is a web-hosted database that displays information about biomarkers and allows users to search and edit existing information, while adding new entries of their own. We are powered by Snorkel, an NLP pipeline package written in Python and developed by Stanford's Info Lab. We aim to create a community around biomarkers in the clinical research world and beyond. Thanks for visiting! More coming soon.</article>
+          </div>
+          <h1 style="margin-left:100px;">Developed By:</h1>
+          <div class="main-container">
+            <div class="container cf">
+              <!-- Course 1 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject development">
+                  <div class="category-color"></div>
+                    <div class="icon"><i class="fa fa-cogs"></i></div>
+                    <h3 class="title"><img id="aboutPic" src="images/parag.jpg"></h3>
+                    <div class="content" style="text-align: center;">Dr. Parag Mallick</div>
+                </div>
+              </div>
+              <!-- Course 2 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject design">
+                  <div class="category-color"></div>
+                    <div class="icon"><i class="fa fa-pencil"></i></div>
+                    <h3 class="title"><img id="aboutPic" src="images/gautam.jpg"></h3>
+                    <div class="content" style="text-align: center;">Gautam Machiraju</div>
+                </div>
+              </div>
+              <!-- Course 3 -->
+              <div class="animation-element bounce-up">
+                <div class="subject photography">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-camera"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/varun.png"></h3>
+                  <div class="content" style="text-align: center;">Varun Tandon</div>
+                </div>
+              </div>
+              <!-- Course 4 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject design">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-pencil"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/cameron.png"></h3>
+                  <div class="content" style="text-align: center;">Cameron Baab</div>
+                </div>
+              </div>
+              <!-- Course 5 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject development">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-cogs"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/clare.png"></h3>
+                  <div class="content" style="text-align: center;">Clare Lei</div>
+                </div>
+              </div>
+              <!-- Course 6 -->
+              <div class="animation-element bounce-up cf">
+                <div class="subject development">
+                  <div class="category-color"></div>
+                  <div class="icon"><i class="fa fa-cogs"></i></div>
+                  <h3 class="title"><img id="aboutPic" src="images/richa.png"></h3>
+                  <div class="content" style="text-align: center;">Richa Sehgal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <script>
+            var $animation_elements = $('.animation-element');
+            var $window = $(window);
+            function check_if_in_view() {
+              var window_height = $window.height();
+              var window_top_position = $window.scrollTop();
+              var window_bottom_position = (window_top_position + window_height);
+              $.each($animation_elements, function() {
+                var $element = $(this);
+                var element_height = $element.outerHeight();
+                var element_top_position = $element.offset().top;
+                var element_bottom_position = (element_top_position + element_height);
+                //check to see if this current container is within viewport
+                if ((element_bottom_position >= window_top_position) &&
+                  (element_top_position <= window_bottom_position)) {
+                  $element.addClass('in-view');
+                } else {
+                  $element.removeClass('in-view');
+                }
+              });
+            }
+            $window.on('scroll resize', check_if_in_view);
+            $window.trigger('scroll');
+          </script>
+        </div>
+
+
+
+
+
+
+      <div id = "result" class="inactive">
+           <div id = "result-table-cont">
+     
+             <table id ="testid" class="display" cellspacing="0" width="100%">  
                <thead>
-               <tr>
-                <th> Biomarker Name
-                <th> Biomarker Type
-                <th> Disease 
-                <th> Associated Drug
-                <th> Medium
-               </tr>
+                 <tr>
+                   <th> Biomarker Name
+                   <th> Biomarker Type
+                  <th> Disease 
+                   <th> Associated Drug
+                   <th> Medium
+                 </tr>
                </thead>
                <tbody>
-                 <tr>
-                 <td>
-                 <td>
-                 <td>
-                 <td>
-                 <td>
-                 </tr>
                </tbody> 
-                     
              </table>
-          <!-- <script src="js/jquery.min.js"> </script>
-          <script src="js/jquery.dataTables.min.js"></script>
-          <script src="js/dataTables.jqueryui.min.js"></script> -->
-               <script type="text/javascript">
-                $(document).ready(function(){
-                  $('#result table').DataTable();
-                  $('#result table').DataTable( {
-                      "processing": true,
-                      "serverSide": true,
-                      "ajax": "js/mongoprocessinggood.php"
-                  });
-                });
-              </script>
+ 
+             <script type="text/javascript">
+               $(document).ready( function () {
+                $('#testid').DataTable();
+               } );
+             </script>
+                  
+             <script type="text/javascript">
+               var table = $('#testid').DataTable( {
+                 processing: true,
+                 'language':{ 
+                   "loadingRecords": "&nbsp;",
+                   "processing": "Loading..."
+                 },
+                 autoWidth: false,
+                 buttons: [ 'copy', 'excel', 'colvis' ]
+               } );
+               table.buttons().container()
+               .insertBefore( '#testid_filter' );
+            </script>
 
            </div>
           </div>
@@ -145,8 +248,6 @@
               <p> </p>
               <p> </p>
               <p> </p>
-              <p> </p>
-
               <p style="font-size:100%;"> DEVELOPED BY THE STANFORD CANARY CENTER </p>
 
               <p> </p>
@@ -158,6 +259,7 @@
 
               <form id="searchForm">
                 <input type= "text" id="word-input" placeholder="ENTER A BIOMARKER"onblur="this.placeholder='ENTER A BIOMARKER'" onfocus="this.placeholder = ''"/>
+                <br><br><button class="browseButton">Browse Database</button>
               </form>
               </div>
 
@@ -178,6 +280,8 @@
   <div class="footer">
     <div id="canary" class="slideUp">
       <a href="https://canarycenter.stanford.edu/"><img src="images/logo-footer.png" class="canary">
+      <p> </p>
+       <p> <img src="images/logo-footer.png" style = "width:80px;height:70px;"> </p>
     <p>  <a href="http://mallicklab.stanford.edu/">MALLICK  LAB</a> </p>
     <p> </p>
     <p> <a href="https://canarycenter.stanford.edu/">Stanford Canary Center for Cancer Early Detection </a> </p>
@@ -195,6 +299,7 @@
     });
   });
 </script>
+
 
   </body>
 </html>
