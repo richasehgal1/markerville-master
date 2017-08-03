@@ -3,8 +3,10 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      height: 50px;
-
+      height: 60px;
+      background-color: black;
+      position: fixed;
+      width: 100%;
   }
 
   .inactive {
@@ -14,20 +16,61 @@
 
 
   .navBar .button {
+    align: right;
     overflow: auto;
     cursor: pointer;
-    width:33%;
     word-wrap: break-word;
     text-align: center;
-    font-size: 125%;
-    border-right-style : solid;
-    border-right-width : 1px;
-    border-color: gray;
+    font-size: 100%;
     font-weight: lighter;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: gray;
   }
 
+  .navBar .logobutton {
+    align: left;
+    width: 800px;
+    overflow: auto;
+    cursor: pointer;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: 125%;
+    font-weight: lighter;
+    font-family: 'Dosis', sans-serif;
+    color: gray;
+  }
+
+.footer {
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  height: 300px;
+  font-size: 12px; 
+  color: gray;
+  letter-spacing: 3px;
+}
+
+
+.footer .canary {
+  text-align: center;
+  height: 70px;
+  width: 80px;
+  padding-top: 120px;
+}
+
+ #canary {
+        visibility: hidden;
+    }
+
+    .fadeIn {
+        -webkit-animation: animat_show 0.8s;
+        animation: animat_show 0.8s;
+        visibility: visible !important;
+    }
+
+    @-webkit-keyframes animat_show{
+        0%{opacity:0}
+        100%{opacity:1}
+    }
 
 
   .navBar .button:hover{
@@ -52,7 +95,7 @@
     border-radius: 12px;
     border-color: gray;
     font-weight: lighter;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Dosis', sans-serif;
   }
 
   .browseButton:hover{
@@ -72,20 +115,35 @@
     border-radius: 12px;
     border-color: gray;
     font-weight: lighter;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Dosis', sans-serif;
   }
 
 
-  #database, #aboutPage, #forum, #result, #resourcesPage{
+  #database, #aboutPage, #forum, #result{
 
     padding-top: 50px;
-    min-height: 100vh;
-    opacity: 0.8;
-    background-image: url("../images/BIOTECH.jpg");
+    min-height: 92vh;
+    opacity: 1.0;
+    background-image: url("../images/section-bg-7.jpg");section-bg-7
+    background-size: 100%;
+    background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('../images/section-bg-7.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
     align-items: center;
 
   }
+
+  #resourcesPage{
+    padding-top: 50px;
+    min-height: 92vh;
+    opacity: 1.0;
+    background-color: grey
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+  }
+
 
 #result thead tr
 {
@@ -123,7 +181,7 @@ display:table-row-group;
 #result-table-cont {
    align-items: center;
     text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: black;
       width: 100vw;
 
@@ -131,7 +189,7 @@ display:table-row-group;
   #forum-table-cont{
     align-items: center;
     text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: white;
     width: 100vw;
 
@@ -158,7 +216,7 @@ display:table-row-group;
 
 
 #message-post-cont{
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-family: 'Dosis', sans-serif;
   color: white;
 }
 
@@ -170,8 +228,7 @@ display:table-row-group;
   margin-top: 40vh;
   opacity: 0.3;
   width: 100vw;
-  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  font-size: 27px;
+  font-family: 'Dosis', sans-serif;
 }
 
 /*#forumForm{
@@ -195,7 +252,7 @@ display:table-row-group;
     margin-top: 3vh;
     opacity: 0.3;
     width: 40vw;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-size: 27px;
 
   }
@@ -210,12 +267,13 @@ display:table-row-group;
       line-height: 30px;
       /*position: absolute;*/
       text-align: center;
-      color: white;
-      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      color: grey;
+      font-family: 'Dosis', sans-serif;
       font-size: 1.6em;
       margin: 0;
       padding:30px;
       padding-bottom: 10px;
+      padding-top: 50px;
 
     }
 
@@ -227,7 +285,7 @@ display:table-row-group;
       /*position: absolute;*/
       text-align: center;
       color: white;
-      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-family: 'Dosis', sans-serif;
       font-size: 1.6em;
       margin: 0;
       padding: 30px;
@@ -235,16 +293,17 @@ display:table-row-group;
     }
 
     #database p{
-      padding: 30px;
-
+      padding-top: 200px;
+      padding: 10px;
       /*position: absolute;*/
       text-align: center;
       /*margin-top: -30vh;*/
       color: white;
       max-height: 50vh;
-      font-size: 2em;
+      font-size: 5em;
       margin: 0;
-      font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      font-family: 'Dosis', sans-serif;
+      letter-spacing: 5px
     }
 
 
@@ -264,9 +323,15 @@ display:table-row-group;
 
       }
 
+    .canarylink {
+      text-align: center;
+      height: 160px;
+      width: 200px;
+    }
+
       #searchForm {
         /*padding-top: 30vh;*/
-        margin: 100px;
+        margin: 0px;
         text-align: center;
       }
 
@@ -285,7 +350,7 @@ display:table-row-group;
         padding-top: 0px;
       }
 
-      #resourcesPage #canary{
+      #resourcesPage #canarylink{
         height: 150px;
         width: 200px;
         opacity: 1.0;
@@ -313,8 +378,8 @@ display:table-row-group;
 
       /* unvisited link */
       a:link {
-      color: white;
-      text-decoration: bold;
+      color: grey;
+      text-decoration: none;
       }
 
       /* visited link */
@@ -325,14 +390,13 @@ display:table-row-group;
 
       /* mouse over link */
       a:hover {
-      color: blue;
+      color: grey;
       text-decoration: underline;
-      text-decoration: bold;
       }
 
       /* selected link */
       a:active {
-      color: blue;
+      color: grey;
       text-decoration: underline;
       }
 /*      @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
@@ -402,3 +466,6 @@ display:table-row-group;
           overflow: hidden;
           opacity: 1 !important;
       }
+
+
+

@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>MarkerVille</title>   
     <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200" rel="stylesheet">
     <!-- <link rel="stylesheet" type="text.css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css"/> -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/animations.css">
     <script src="js/jquery.js"> </script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/result.js" defer></script>
@@ -17,17 +23,23 @@
     <script src="js/main.js" defer></script>
     <script src="js/fetchData.js" defer></script>
     <script src="js/fetchForum.js" defer></script>
+    <script src="js/animationscroll.js" defer></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     </head>
 
-      <body>
+  <body>
           <div class = "navBar">
-              <div class = "button" id = "databaseButton" > Biomarker Search  </div>
-              <div class = "button" id = "forumButton">  Forum </div>
-              <div class = "button" id = "aboutButton"> About  </div>
-              <div class = "button" id = "resourcesButton"> Resources </div>
+              <div class = "logobutton" id = "logoButton"> 
+                <img src = "images/markerville_logo.png" style = "width:140px;height:50px;"> 
+                </img> 
+              </div>
+              <div class = "button" id = "databaseButton" > SEARCH  </div>
+              <div class = "button" id = "resourcesButton"> RESOURCES </div>
+              <div class = "button" id = "forumButton">  FAQ </div>
+              <div class = "button" id = "aboutButton"> ABOUT  </div>
           </div>
 
           <div id =  "forum" class="inactive">
@@ -130,12 +142,25 @@
 
           <div id = "database">
 
-              <p> Welcome to MarkerVille! <br>Search by biomarker, drug, or cancer type: </p>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+              <p> </p>
+
+              <p style="font-size:100%;"> DEVELOPED BY THE STANFORD CANARY CENTER </p>
+
+              <p> </p>
+
+              <p style="font-size:400%;"> M A R K E R V I L L E </p>
+              
               <div>
                 <!-- onsubmit="return false" -->
 
               <form id="searchForm">
-                <input type= "text" id="word-input" placeholder="Enter search here"onblur="this.placeholder='Enter search here'" onfocus="this.placeholder = ''"/>
+                <input type= "text" id="word-input" placeholder="ENTER A BIOMARKER"onblur="this.placeholder='ENTER A BIOMARKER'" onfocus="this.placeholder = ''"/>
               </form>
               </div>
               <div class = "logo-cont">
@@ -149,14 +174,33 @@
 
             <div id = "resourcesPic">
             <a href="https://github.com/HazyResearch/snorkel"><img id = "snorkel" src = "images/snorkel.png"></img></a>
-            <a href="https://canarycenter.stanford.edu/"><img id = "canary" src = "images/canary.png"></img></a>
+            <a href="https://canarycenter.stanford.edu/"><img id = "canarylink" src = "images/canary.png"></img></a>
             <a href="https://nodejs.org/en/"><img id = "nodejs" src = "images/nodejs.png"></img></a>
             </div>
 
-              <div class = "logo-cont">
-            <img class = "logo" src = "images/logo.png"> </img>
-          </div>
         </div>
+
+  <div class="footer">
+    <div id="canary" class="slideUp">
+      <a href="https://canarycenter.stanford.edu/"><img src="images/logo-footer.png" class="canary">
+    <p>  <a href="http://mallicklab.stanford.edu/">MALLICK  LAB</a> </p>
+    <p> </p>
+    <p id="description"> Stanford Canary Center for Cancer Early Detection </p>
+  </div>
+
+  <script>
+  $(window).scroll(function() {
+    $('#canary').each(function(){
+    var imagePos = $(this).offset().top;
+
+    var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow+400) {
+        $(this).addClass("slideUp");
+      }
+    });
+  });
+</script>
 
   </body>
 </html>
+
