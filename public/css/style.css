@@ -55,7 +55,7 @@
 .footer {
   text-align: center;
   font-family: 'Dosis', sans-serif;
-  height: 230px;
+  height: 200px;
   font-size: 12px; 
   color: gray;
   letter-spacing: 3px;
@@ -64,8 +64,8 @@
 
 .footer .canary {
   text-align: center;
-  height: 0.1px;
-  width: 0.1px;
+  height: 70px;
+  width: 80px;
   padding-top: 0px;
 }
 
@@ -193,7 +193,7 @@ display:table-row-group;
 #result-table-cont {
    align-items: center;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Dosis', sans-serif;
     color: black;
       width: 100vw;
 
@@ -237,8 +237,9 @@ display:table-row-group;
   text-align: center;
   color: gray;
   height: 70px;
-  opacity: 0.5;
-  width: 60%;
+  margin-top: 40vh;
+  opacity: 0.3;
+  width: 100vw;
   font-family: 'Dosis', sans-serif;
 }
 
@@ -355,7 +356,7 @@ display:table-row-group;
 
       #resourcesPage #snorkel{
         height: 185px;
-        width: 85px;
+        width: 150px;
         opacity: 1.0;
         padding:30px;
         padding-top: 0px;
