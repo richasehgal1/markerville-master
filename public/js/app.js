@@ -25,7 +25,7 @@ class App {
     this.showResult = this.showResult.bind(this);
     this.showResources = this.showResources.bind(this);
 
-    this.browseButton = document.querySelector('#browseButton')
+    this.browseButton = document.querySelector('#browseButton');
     this.logoButton = document.querySelector('#logoButton');
     this.databaseButton = document.querySelector('#databaseButton');
     this.forumButton = document.querySelector('#forumButton');
@@ -34,7 +34,7 @@ class App {
     this.resourcesButton = document.querySelector('#resourcesButton');
 
     this.logoButton.addEventListener('click', this.showDatabase);
-    this.browseButton.addEventListener('click', this.showResult)
+    this.browseButton.addEventListener('click', this.showResult);
     this.databaseButton.addEventListener('click', this.showDatabase);
     this.forumButton.addEventListener('click', this.showForum);
     this.aboutButton.addEventListener('click', this.showAbout);
